@@ -35,69 +35,188 @@
         .emphasis {
             font-weight: bold;
         }
+        .language-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switch a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .language-switch a.active {
+            color: #2c3e50;
+            cursor: default;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <h1>隐私政策</h1>
-    <p>最后更新日期：2024年3月4日</p>
+    <div class="language-switch">
+        <a href="#" id="zh-CN" class="active">中文</a>
+        <a href="#" id="en-US">English</a>
+    </div>
     
-    <p>感谢您选择使用MindKeeper应用。本隐私政策旨在帮助您了解我们如何收集、使用、存储和保护您的个人信息，以及您对这些信息拥有的权利。</p>
+    <!-- 中文版本 -->
+    <div id="content-zh-CN" class="content active">
+        <h1>隐私政策</h1>
+        <p>感谢您选择使用MindKeeper应用。本隐私政策旨在帮助您了解我们如何收集、使用、存储和保护您的个人信息，以及您对这些信息拥有的权利。</p>
+        
+        <h2>1. 我们收集的信息</h2>
+        <p>为了提供功能完善的专注力和时间管理服务，我们可能会收集以下信息：</p>
+        <ul>
+            <li><span class="emphasis">账户信息</span>：当您使用Google账号登录时，我们会获取您的Google账号信息，仅用于身份验证和数据同步功能。</li>
+            <li><span class="emphasis">应用使用数据</span>：我们收集您使用设备上各应用的时间和频率数据，以帮助您了解自己的使用习惯，提高时间管理效率。这些数据仅存储在您的设备上，除非您主动选择同步到云端。</li>
+            <li><span class="emphasis">设备信息</span>：我们可能收集您的设备型号、操作系统版本等信息，以优化应用性能。</li>
+            <li><span class="emphasis">应用内购买信息</span>：当您进行应用内购买时，我们会处理相关交易信息。</li>
+        </ul>
+        
+        <h2>2. 我们如何使用您的信息</h2>
+        <p>我们使用收集的信息：</p>
+        <ul>
+            <li>提供、维护和改进我们的服务</li>
+            <li>帮助您跟踪和管理专注时间及应用使用情况</li>
+            <li>实现数据备份和同步功能</li>
+            <li>处理应用内购买交易</li>
+            <li>提供客户支持</li>
+            <li>发送服务通知和更新</li>
+        </ul>
+        
+        <h2>3. 信息安全</h2>
+        <p>我们重视您的隐私，采取合理的安全措施保护您的个人信息不被未经授权访问、使用或泄露。您的应用使用数据主要存储在您的设备上，只有在您选择使用备份功能时才会上传到您授权的云端服务。</p>
+        
+        <h2>4. 权限说明</h2>
+        <p>我们的应用需要以下权限才能正常运行所有功能：</p>
+        <ul>
+            <li><span class="emphasis">获取账户(GET_ACCOUNTS)</span>：用于实现Google账号登录和云端数据同步功能。我们仅使用此权限进行身份验证和数据备份，不会用于其他目的。</li>
+            <li><span class="emphasis">获取应用使用统计(PACKAGE_USAGE_STATS)</span>：用于收集您的应用使用时间和频率数据，帮助您了解自己的使用习惯和改善时间管理。这些数据仅用于应用内分析展示，不会分享给第三方。</li>
+            <li><span class="emphasis">查询应用列表(QUERY_ALL_PACKAGES)</span>：用于识别设备上安装的应用，以便统计各应用使用时间。我们不会收集应用内的数据或内容。</li>
+            <li><span class="emphasis">互联网访问(INTERNET)</span>：用于数据同步、更新和应用内购买功能。</li>
+            <li><span class="emphasis">振动(VIBRATE)</span>：用于提供定时器完成等通知提醒。</li>
+            <li><span class="emphasis">网络状态(ACCESS_NETWORK_STATE)</span>：用于检测网络连接状态，确保数据同步功能正常工作。</li>
+            <li><span class="emphasis">应用内购买(BILLING)</span>：用于处理高级功能的付费订阅。</li>
+        </ul>
+        
+        <h2>5. 儿童隐私</h2>
+        <p>我们的应用不针对13岁以下儿童，我们不会故意收集13岁以下儿童的个人信息。如果您是父母或监护人，发现您的孩子向我们提供了个人信息，请联系我们，我们将采取措施从我们的系统中删除这些信息。</p>
+        
+        <h2>6. 您的权利</h2>
+        <p>作为用户，您有权：</p>
+        <ul>
+            <li>访问您存储在我们服务中的个人信息</li>
+            <li>要求更正您的个人信息</li>
+            <li>删除您的账户和相关数据</li>
+            <li>拒绝数据处理</li>
+            <li>导出您的数据</li>
+        </ul>
+        
+        <h2>7. 本隐私政策的变更</h2>
+        <p>我们可能会不时更新本隐私政策。当我们进行重大变更时，我们会通过应用内通知或其他适当方式通知您。我们建议您定期查看本政策以了解最新信息。</p>
+        
+        <h2>8. 联系我们</h2>
+        <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+        <p>邮箱：jibaichang@gmail.com</p>
+        
+        <p style="margin-top: 40px; color: #7f8c8d; font-size: 14px;">© 2024 MindKeeper. 保留所有权利。</p>
+    </div>
     
-    <h2>1. 我们收集的信息</h2>
-    <p>为了提供功能完善的专注力和时间管理服务，我们可能会收集以下信息：</p>
-    <ul>
-        <li><span class="emphasis">账户信息</span>：当您使用Google账号登录时，我们会获取您的Google账号信息，仅用于身份验证和数据同步功能。</li>
-        <li><span class="emphasis">应用使用数据</span>：我们收集您使用设备上各应用的时间和频率数据，以帮助您了解自己的使用习惯，提高时间管理效率。这些数据仅存储在您的设备上，除非您主动选择同步到云端。</li>
-        <li><span class="emphasis">设备信息</span>：我们可能收集您的设备型号、操作系统版本等信息，以优化应用性能。</li>
-        <li><span class="emphasis">应用内购买信息</span>：当您进行应用内购买时，我们会处理相关交易信息。</li>
-    </ul>
+    <!-- 英文版本 -->
+    <div id="content-en-US" class="content">
+        <h1>Privacy Policy</h1>
+        
+        <p>Thank you for choosing MindKeeper. This Privacy Policy is designed to help you understand how we collect, use, store, and protect your personal information, as well as the rights you have regarding this information.</p>
+        
+        <h2>1. Information We Collect</h2>
+        <p>To provide a comprehensive focus and time management service, we may collect the following information:</p>
+        <ul>
+            <li><span class="emphasis">Account Information</span>: When you sign in with your Google account, we obtain your Google account information solely for authentication and data synchronization purposes.</li>
+            <li><span class="emphasis">App Usage Data</span>: We collect data about the time and frequency of your device's app usage to help you understand your habits and improve time management efficiency. This data is stored locally on your device unless you actively choose to sync it to the cloud.</li>
+            <li><span class="emphasis">Device Information</span>: We may collect information about your device model, operating system version, etc., to optimize application performance.</li>
+            <li><span class="emphasis">In-App Purchase Information</span>: When you make in-app purchases, we process the related transaction information.</li>
+        </ul>
+        
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the collected information to:</p>
+        <ul>
+            <li>Provide, maintain, and improve our services</li>
+            <li>Help you track and manage focus time and app usage</li>
+            <li>Enable data backup and synchronization</li>
+            <li>Process in-app purchase transactions</li>
+            <li>Provide customer support</li>
+            <li>Send service notifications and updates</li>
+        </ul>
+        
+        <h2>3. Information Security</h2>
+        <p>We value your privacy and implement reasonable security measures to protect your personal information from unauthorized access, use, or disclosure. Your app usage data is primarily stored on your device and is only uploaded to cloud services you authorize when you choose to use the backup feature.</p>
+        
+        <h2>4. Permission Explanation</h2>
+        <p>Our app requires the following permissions to function properly:</p>
+        <ul>
+            <li><span class="emphasis">GET_ACCOUNTS</span>: Used for Google account login and cloud data synchronization. We only use this permission for authentication and data backup, not for other purposes.</li>
+            <li><span class="emphasis">PACKAGE_USAGE_STATS</span>: Used to collect data on your app usage time and frequency, helping you understand your habits and improve time management. This data is only used for in-app analysis and display and is not shared with third parties.</li>
+            <li><span class="emphasis">QUERY_ALL_PACKAGES</span>: Used to identify apps installed on your device to track usage time for each app. We do not collect data or content from within the apps.</li>
+            <li><span class="emphasis">INTERNET</span>: Used for data synchronization, updates, and in-app purchase functionality.</li>
+            <li><span class="emphasis">VIBRATE</span>: Used to provide notifications such as timer completion.</li>
+            <li><span class="emphasis">ACCESS_NETWORK_STATE</span>: Used to detect network connection status to ensure data synchronization works properly.</li>
+            <li><span class="emphasis">BILLING</span>: Used to process paid subscriptions for premium features.</li>
+        </ul>
+        
+        <h2>5. Children's Privacy</h2>
+        <p>Our application is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you are a parent or guardian and discover that your child has provided us with personal information, please contact us, and we will take steps to delete this information from our systems.</p>
+        
+        <h2>6. Your Rights</h2>
+        <p>As a user, you have the right to:</p>
+        <ul>
+            <li>Access your personal information stored in our services</li>
+            <li>Request correction of your personal information</li>
+            <li>Delete your account and associated data</li>
+            <li>Refuse data processing</li>
+            <li>Export your data</li>
+        </ul>
+        
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we make significant changes, we will notify you through in-app notifications or other appropriate means. We recommend that you regularly review this policy for the latest information.</p>
+        
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:</p>
+        <p>Email: jibaichang@gmail.com</p>
+        
+        <p style="margin-top: 40px; color: #7f8c8d; font-size: 14px;">© 2024 MindKeeper. All rights reserved.</p>
+    </div>
     
-    <h2>2. 我们如何使用您的信息</h2>
-    <p>我们使用收集的信息：</p>
-    <ul>
-        <li>提供、维护和改进我们的服务</li>
-        <li>帮助您跟踪和管理专注时间及应用使用情况</li>
-        <li>实现数据备份和同步功能</li>
-        <li>处理应用内购买交易</li>
-        <li>提供客户支持</li>
-        <li>发送服务通知和更新</li>
-    </ul>
-    
-    <h2>3. 信息安全</h2>
-    <p>我们重视您的隐私，采取合理的安全措施保护您的个人信息不被未经授权访问、使用或泄露。您的应用使用数据主要存储在您的设备上，只有在您选择使用备份功能时才会上传到您授权的云端服务。</p>
-    
-    <h2>4. 权限说明</h2>
-    <p>我们的应用需要以下权限才能正常运行所有功能：</p>
-    <ul>
-        <li><span class="emphasis">获取账户(GET_ACCOUNTS)</span>：用于实现Google账号登录和云端数据同步功能。我们仅使用此权限进行身份验证和数据备份，不会用于其他目的。</li>
-        <li><span class="emphasis">获取应用使用统计(PACKAGE_USAGE_STATS)</span>：用于收集您的应用使用时间和频率数据，帮助您了解自己的使用习惯和改善时间管理。这些数据仅用于应用内分析展示，不会分享给第三方。</li>
-        <li><span class="emphasis">查询应用列表(QUERY_ALL_PACKAGES)</span>：用于识别设备上安装的应用，以便统计各应用使用时间。我们不会收集应用内的数据或内容。</li>
-        <li><span class="emphasis">互联网访问(INTERNET)</span>：用于数据同步、更新和应用内购买功能。</li>
-        <li><span class="emphasis">振动(VIBRATE)</span>：用于提供定时器完成等通知提醒。</li>
-        <li><span class="emphasis">网络状态(ACCESS_NETWORK_STATE)</span>：用于检测网络连接状态，确保数据同步功能正常工作。</li>
-        <li><span class="emphasis">应用内购买(BILLING)</span>：用于处理高级功能的付费订阅。</li>
-    </ul>
-    
-    <h2>5. 儿童隐私</h2>
-    <p>我们的应用不针对13岁以下儿童，我们不会故意收集13岁以下儿童的个人信息。如果您是父母或监护人，发现您的孩子向我们提供了个人信息，请联系我们，我们将采取措施从我们的系统中删除这些信息。</p>
-    
-    <h2>6. 您的权利</h2>
-    <p>作为用户，您有权：</p>
-    <ul>
-        <li>访问您存储在我们服务中的个人信息</li>
-        <li>要求更正您的个人信息</li>
-        <li>删除您的账户和相关数据</li>
-        <li>拒绝数据处理</li>
-        <li>导出您的数据</li>
-    </ul>
-    
-    <h2>7. 本隐私政策的变更</h2>
-    <p>我们可能会不时更新本隐私政策。当我们进行重大变更时，我们会通过应用内通知或其他适当方式通知您。我们建议您定期查看本政策以了解最新信息。</p>
-    
-    <h2>8. 联系我们</h2>
-    <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
-    <p>邮箱：jibaichang@gmail.com</p>
-    
-    <p style="margin-top: 40px; color: #7f8c8d; font-size: 14px;">© 2024 MindKeeper. 保留所有权利。</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageLinks = document.querySelectorAll('.language-switch a');
+            const contents = document.querySelectorAll('.content');
+            
+            languageLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 更新语言链接的激活状态
+                    languageLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 更新内容的显示状态
+                    const targetId = `content-${this.id}`;
+                    contents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === targetId) {
+                            content.classList.add('active');
+                        }
+                    });
+                    
+                    // 更新页面语言
+                    document.documentElement.lang = this.id;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
